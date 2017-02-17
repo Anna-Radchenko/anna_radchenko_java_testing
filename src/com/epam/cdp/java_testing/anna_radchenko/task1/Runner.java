@@ -11,23 +11,26 @@ class Runner {
         Runner runner = new Runner();
         runner.execute();
     }
+    
+/**
+* Метод выводит в консоль массив целых чисел в случайном порядке от -10 до 10;
+* А затем выводит массив целых чисел в случайном порядке от -10 до 10, но при этом заменяя все нечётные числа
+* на 0.
+*/
+ 
     public void execute() {
 
         int[] myArray = new int[21];
 
         for (int x = 0; x < myArray.length; x++) {
-
             myArray[x] = ((int) (Math.random() * 21) - 10);
-
             System.out.print(myArray[x]);
         }
+        
         for (int x = 0; x < myArray.length; x++) {
-
             if (myArray[x] < 0) {
                 myArray[x] = 0;
-            } else if (myArray[x] >= 0) {
-                myArray[x] = myArray[x];
-            }
+            } 
 
             System.out.print(myArray[x]);
         }
