@@ -93,9 +93,8 @@ public class Tour extends TourSearcher {
     }
     System.out.println(filterResult);
 
-    Collections.sort(tourList,new
-
-    PriceComparator());
+    Collections.sort(tourList,new PriceComparator());
+    
     System.out.println(tourList.getName()+tourList.getType()+tourList.getPrice()+tourList.getDurarition()+tourList.getMeals()+tourList.getTransport());
 
     public void write(ArrayList filterResult) throws IOException {
