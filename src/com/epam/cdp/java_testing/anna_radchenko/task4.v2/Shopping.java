@@ -12,14 +12,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class Tour {
-    String name = new String();
-    double price = new double();
-    int duration = new int();
-    String startDate = new String();
-    int tourist = new int();
-    
-    Tour() {
-        
-    }
+public class Shopping extends Tour {
+
 }
