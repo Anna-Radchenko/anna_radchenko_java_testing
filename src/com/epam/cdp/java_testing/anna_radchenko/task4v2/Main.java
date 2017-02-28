@@ -1,4 +1,4 @@
-package com.epam.cdp.java_testing.anna_radchenko.task4.v2;
+package com.epam.cdp.java_testing.anna_radchenko.task4v2;
 
 /*
 * The HomeTask2, task1, option 8:
@@ -11,15 +11,11 @@ package com.epam.cdp.java_testing.anna_radchenko.task4.v2;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import com.epam.cdp.java_testing.anna_radchenko.task4v2.Tour;
 
-public class Tour {
-    String name = new String();
-    double price = new double();
-    int duration = new int();
-    String startDate = new String();
-    int tourist = new int();
+class Main {
     
-    Tour() {
-        
+    public static void main(String... args) {
     }
 }
+
