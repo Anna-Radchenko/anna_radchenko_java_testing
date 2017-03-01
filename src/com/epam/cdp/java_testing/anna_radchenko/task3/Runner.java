@@ -1,6 +1,7 @@
 package com.epam.cdp.java_testing.anna_radchenko.task3;
 
 import java.util.Scanner;
+import java.io.IOException;
 
 class Runner {
 
@@ -14,25 +15,29 @@ class Runner {
         System.out.print ("Enter the first number");
         float a = in.nextInt();
                 System.out.print ("Enter one of the following operator: +, -, *, /");
-        String k = in.next();
+        String operator = in.next();
         System.out.print ("Enter the second number");
         float b = in.nextInt();
-        switch (k) {
+        float result;
+        switch (operator) {
             case "+":
-                System.out.print ("a + b = " + (a + b) );
+                result = a + b;
                 break;
             case "-":
-                System.out.print ("a - b = " + (a - b) );
+                result = a - b;
                 break;
             case "*":
-                System.out.print ("a * b = " + (a * b) );
+                result = a * b;
                 break;
             case "/":
-                System.out.print ("a / b = " + (a / b) );
+                if(b == 0) {
+                throw new NumberFormatException("It is not allowed to divide by zero");
+                } 
+                else {
+                result = a / b;
+            }
                 break;
             }
+        System.out.print (result);
         }
-
     }
-
-
