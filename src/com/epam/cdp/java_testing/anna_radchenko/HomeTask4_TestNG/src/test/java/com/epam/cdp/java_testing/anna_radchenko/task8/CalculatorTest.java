@@ -98,6 +98,4 @@ public class CalculatorTest {
         public void powSecondValue() {
         Assert.assertNotEquals(2, calc.pow(1,2));
         }
-
-    @AfterClass
 }
