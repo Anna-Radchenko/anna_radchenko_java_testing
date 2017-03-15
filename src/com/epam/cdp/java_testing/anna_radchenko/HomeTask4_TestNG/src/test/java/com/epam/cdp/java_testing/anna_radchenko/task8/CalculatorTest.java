@@ -15,73 +15,89 @@ package com.epam.cdp.java_testing.anna_radchenko.task8;
 * 10.	Implement tests launching with custom Runner, implement and use at least one listener.
 */
 
-import static org.testng.Assert.*;
-import org.testng.annotations;
+import java.lang.*;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class CalculatorTest {
 
+    @BeforeClass
+    public void beforeClass(){
+        Calculator calc = new Calculator();
+    }
+
+    @AfterClass
+    public void afterClass(){
+        Calculator calc = null;
+    }
+
     //positive tests
 
-    @Test(groups = "positiveTests")
+    @Test(groups = {"positiveTests"})
     public void testSumDouble() {
         Assert.assertEquals(10.22, calc.sum(4.11,6.11));
     }
 
-    @Test(groups = "positiveTests")
+    @Test(groups = {"positiveTests"})
     public void testSubDouble() {
         Assert.assertEquals(2.22, calc.sub(5.55,3.33));
     }
 
-    @Test(groups = "positiveTests")
+    @Test(groups = {"positiveTests"})
     public void testSumLong() {
         Assert.assertEquals(2222222223, calc.sum(1111111111,1111111112));
     }
 
-    @Test(groups = "positiveTests")
+    @Test(groups = {"positiveTests"})
     public void testSubLong()  {
         Assert.assertEquals(1111111112, calc.sub(2222222223,1111111111));
     }
 
-    @Test(groups = "positiveTests")
+    @Test(groups = {"positiveTests"}
     public void testMultDouble()  {
         Assert.assertEquals(20, calc.mult(4.11, 5.11));
     }
 
-    @Test(expectedExceptions = NumberFormatException, groups = "positiveTests")
+    @Test(expectedExceptions = NumberFormatException, groups = {"positiveTests"})
     public void testNumberFormatException() {
         b == 0
     }
 
     //parameterized test
 
-    @DataProvider(groups = "positiveTests")
+    @DataProvider(groups = {"positiveTests"})
     public Object[][] divLocalData() {
         return new Object[][]{
                 {4, calc.div(4.44, 1.11)},
         };
     }
 
-    @Test(dataProvider = "divLocalData")
+    @Test(dataProvider = "divLocalData", groups = {"positiveTests"})
     public void div(int result, int divNumber) {
-        assertEquals(result, divNumber);
+        Assert.assertEquals(result, divNumber);
     }
 
     //negative tests
 
     @Test
-    public void(groups = "negativeTests")
+    public void(groups = {"negativeTests"})
         public void testThreeNumbers() {
         Assert.assertNotEquals(3, calc.sum(1, 1, 1));
         }
 
     @Test
-    public void(groups = "negativeTests")
+    public void(groups = {"negativeTests"})
         public void divSecondValue() {
-        Assert.asserNotEquals(3, calc.div(2,6));
+        Assert.assertNotEquals(3, calc.div(2,6));
         }
     @Test
-    public void(groups = "negativeTests")
+    public void(groups = {"negativeTests"})
         public void powSecondValue() {
-        Assert.assertNotEquals(2, calc.pow(1,2))
+        Assert.assertNotEquals(2, calc.pow(1,2));
         }
+
+    @AfterClass
 }

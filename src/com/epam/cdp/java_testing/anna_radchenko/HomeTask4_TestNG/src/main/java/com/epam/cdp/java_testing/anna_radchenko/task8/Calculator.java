@@ -1,7 +1,7 @@
 package com.epam.cdp.java_testing.anna_radchenko.task8;
 
-import /Users/anna/Desktop/calculator-1.0.jar!/com/epam/tat/module4/Calculator.class;
-import  /Users/anna/Desktop/calculator-1.0.jar!/com/epam/tat/module4/Timeout.class;
+import ("Users/anna/Desktop/calculator-1.0.jar!/com/epam/tat/module4/Calculator.class");
+import  ("Users/anna/Desktop/calculator-1.0.jar!/com/epam/tat/module4/Timeout.class");
 
 /*
 * Create a java project. Import Calculator.jar and TestNG libraries.
